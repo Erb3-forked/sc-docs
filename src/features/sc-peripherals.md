@@ -119,17 +119,20 @@ All arguments except for `shapesOff`, `shapesOn`, and `bounds` are optional.
 - `lightWhenOff`: (optional, boolean) Whether the 3D print emits light when in the 'off' state.
 - `lightWhenOn`: (optional, boolean) Whether the 3D print emits light when in the 'on' state.
 - `redstoneLevel`: (optional, number) The redstone level of the 3D print. Must be between 0 or 15.
+- `seatPos`: (optional, table) The position of the seat on the 3D print. If not nil, must be a table containing three
+  numbers between 0.1 and 0.9, e.g. `{ 0.5, 0.5, 0.5 }`, where 0.5 is the center of the block. When not nil, the print
+  will be a seat that can be sat on by right-clicking.
 - `shapesOff`: (**required**, array of objects) The shapes of the 3D print when in the 'off' state. Each object in the array
   must have a `bounds` property with the bounds of the shape, an optional `texture` property with the texture of the shape,
   and an optional `tint` property with the tint of the shape, which may be a number or a hex string (`RRGGBB`).
-    - `bounds`: (**required**, array of numbers) The bounds of the shape, in the format
-      `[minX, minY, minZ, maxX, maxY, maxZ]`. Numbers must be between 0 and 16 inclusive (16 is the edge of the block).
-    - `texture`: (optional, string) The texture of the shape, including the namespace. For example,
-      `minecraft:block/stone` or `sc-peripherals:block/white`. Use the texture analyzer item to find the texture of a
-      block in the world. The `sc-peripherals:block/white` texture is available as a blank texture for tinting. If
-      texture is not specified or empty string resulting shape is not rendered.
-    - `tint`: (optional, number or string) The tint of the shape, as a hex string in the format `RRGGBB`, or a single
-      decimal value.
+  - `bounds`: (**required**, array of numbers) The bounds of the shape, in the format
+    `[minX, minY, minZ, maxX, maxY, maxZ]`. Numbers must be between 0 and 16 inclusive (16 is the edge of the block).
+  - `texture`: (optional, string) The texture of the shape, including the namespace. For example,
+    `minecraft:block/stone` or `sc-peripherals:block/white`. Use the texture analyzer item to find the texture of a
+    block in the world. The `sc-peripherals:block/white` texture is available as a blank texture for tinting. If
+    texture is not specified or empty string resulting shape is not rendered.
+  - `tint`: (optional, number or string) The tint of the shape, as a hex string in the format `RRGGBB`, or a single
+    decimal value.
 - `shapesOn`: (**required**, array of objects) Same as `shapesOff`, but for the 'on' state. To disallow state changes
   and have no 'on' state, pass an empty array.
 
@@ -365,6 +368,14 @@ Sets the redstone level of the print model. This must be between 0 and 15 (inclu
 ### `printer.setStateLighting(lightWhenOff:boolean, lightWhenOn:boolean)`
 
 Sets whether the print model is emitting light in the "off" state and "on" state respectively.
+
+### `printer.getSeatPos(): number, number, number`
+
+Returns the position of the seat on the print model. If the print model is not a seat, this will return `nil, nil, nil`.
+
+### `printer.setSeatPos(x:number, y:number, z:number)`
+Sets the position of the seat on the print model. The positions must be between 0.1 and 0.9 for each axis, or `nil` to
+remove the seat.
 
 ### `printer.setTooltip([tooltip:string])`
 
