@@ -78,6 +78,8 @@ Any chest with the same frequency will share inventory, enabling item transfer o
 dimensions. The frequency can be changed by right-clicking the three slots on top of the chest with a dye. As there are
 16 colors, there are 4096 possible frequencies.
 
+You can also change the frequencies and personal status of an Ender Storage with [crafting recipes](#crafting-recipes).
+
 ### Personal frequencies
 
 If a player right-clicks the handle of the Ender Storage with a <ItemImg img="diamond" name="Diamond" />, it becomes a
@@ -97,6 +99,21 @@ trust in your claims.
 ::: tip
 Public (non-personal) Ender Storage chests do not need an emerald to be changed by ComputerCraft. 
 :::
+
+### Crafting recipes
+
+When placing any Ender Storage in a crafting grid, you can change its frequency and personal status:
+
+- Place three dyes in the top row of a crafting grid, and the Ender Storage in any slot, to change the frequency.
+- Place a diamond in any slot to make the chest personal. The owner will be the player performing the crafting
+  operation, so if the player isn't available for some reason (e.g. automated crafting in some conditions), this recipe 
+  will not work. The diamond will not be consumed.
+- Place an emerald in any slot to make the chest allow ComputerCraft to change its frequency. This also implies the
+  chest is personal. The emerald will not be consumed.
+
+All three of these can be combined in a single crafting operation.
+
+![Crafting an Ender Storage with Red Dye, Lime Dye, and Blue Dye in the top row.](/img/sc-goodies/ender_storage_recipe.png)
 
 ## Peripheral API - Ender Storage
 
