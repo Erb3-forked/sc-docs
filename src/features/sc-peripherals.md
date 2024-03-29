@@ -119,9 +119,9 @@ All arguments except for `shapesOff`, `shapesOn`, and `bounds` are optional.
 - `lightWhenOff`: (optional, boolean) Whether the 3D print emits light when in the 'off' state.
 - `lightWhenOn`: (optional, boolean) Whether the 3D print emits light when in the 'on' state.
 - `redstoneLevel`: (optional, number) The redstone level of the 3D print. Must be between 0 or 15.
-- `seatPos`: (optional, table) The position of the seat on the 3D print. If not nil, must be a table containing three
-  numbers between 0.1 and 0.9, e.g. `{ 0.5, 0.5, 0.5 }`, where 0.5 is the center of the block. When not nil, the print
-  will be a seat that can be sat on by right-clicking.
+- `seatPos`: (optional, array of numbers) The position of the seat on the 3D print. If not null or undefined, must be a
+  array containing three numbers between 0.1 and 0.9, e.g. `[0.5, 0.5, 0.5]`, where 0.5 is the center of the block. When 
+  not null or undefined, the print will be a seat that can be sat on by right-clicking.
 - `shapesOff`: (**required**, array of objects) The shapes of the 3D print when in the 'off' state. Each object in the array
   must have a `bounds` property with the bounds of the shape, an optional `texture` property with the texture of the shape,
   and an optional `tint` property with the tint of the shape, which may be a number or a hex string (`RRGGBB`).
