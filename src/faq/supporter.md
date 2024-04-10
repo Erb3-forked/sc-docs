@@ -129,7 +129,8 @@ vanilla Elytras and sc-goodies colored/special Elytras. Run `/supporter elytra` 
   compatible with textures for vanilla Elytras, e.g. from other resource packs. The right wing texture is flipped
   horizontally.
 
-You can download the templates for both modes in a variety of formats on the Custom Elytra screen:
+You can download the templates for both modes in a variety of formats on the Custom Elytra screen, or from
+[here](https://github.com/SwitchCraftCC/sc-docs/tree/1.20.1/src/public/supporter-elytra-templates):
 - Layered (Aseprite) - Contains both an example Elytra and the UV map.
 - Layered (Paint.NET) - Contains both an example Elytra and the UV map.
 - Layered (GIMP) - Contains both an example Elytra and the UV map.
