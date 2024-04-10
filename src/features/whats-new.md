@@ -79,6 +79,12 @@ Here is a high level overview of what to expect in SwitchCraft 3:
   - You can choose which supporter tier to show publicly by running `/supporter tier <1-3>` or `/supporter tier auto`
   - You can also now opt out of showing your supporter tag publicly by running `/supporter opt out`
   - Supporters now have access to the `/hat` and `/sleep` commands, and `/fly` in the lobby
+  - [Supporter Customization](/faq/supporter#supporter-customization):
+    - [Custom Hats](/faq/supporter#custom-hats): Wear almost any item as a hat (including 3D prints and posters), with
+      the ability to change the position, rotation, and scale of the hat.
+    - [Custom Elytras](/faq/supporter#custom-elytras): Use a poster to change the texture of your Elytra, with support 
+      for asymmetric wing textures
+    - [Step Sounds](/faq/supporter#step-sounds): Override your step sounds to the sounds of many other blocks
 - Staff icons in chat&nbsp;
   <ItemImg img="staff-icon-1" alt="Staff icon 1" />&nbsp;
   <ItemImg img="staff-icon-2" alt="Staff icon 2" />
