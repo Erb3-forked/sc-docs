@@ -139,6 +139,8 @@ You can download the templates for both modes in a variety of formats on the Cus
 #### Tips
 - Click and drag to rotate the preview window, and scroll to zoom.
 - Hover over the poster preview to fade out the UV template.
+- Although the vanilla Elytra texture is 64x32, posters are 128x128, so textures must be scaled up to this size to fit.
+  This also means you get 2x extra detail horizontally, and 4x extra detail vertically.
 
 ![Screenshot of the "Custom Elytra" tab in the Supporter Customization screen.](/img/supporter-customization-elytra.png)
 
